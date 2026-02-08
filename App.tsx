@@ -108,7 +108,7 @@ const App: React.FC = () => {
         )}
 
         {!currentStory && !isLoading ? (
-          <div className="space-y-8 sm:space-y-12 animate-in fade-in zoom-in-95 duration-500">
+          <div key="generator-form" className="space-y-8 sm:space-y-12 animate-in fade-in zoom-in-95 duration-500">
             <div className="text-center space-y-4 sm:space-y-6">
               <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-slate-900 tracking-tight leading-tight px-2">
                 စိတ်ကူးထဲက <span className="text-indigo-600">ဇာတ်လမ်းများကို</span> <br className="hidden sm:block" />
@@ -121,7 +121,7 @@ const App: React.FC = () => {
             <GeneratorForm onSubmit={handleGenerate} isLoading={isLoading} />
           </div>
         ) : (
-          <div className="animate-in fade-in slide-in-from-bottom-8 duration-700">
+          <div key="story-display" className="animate-in fade-in slide-in-from-bottom-8 duration-700">
             {currentStory && (
               <StoryDisplay 
                 story={currentStory} 
